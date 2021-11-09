@@ -12,11 +12,9 @@ int melody[] = {NOTE_C4, NOTE_D4, NOTE_E4, NOTE_F4,
 int button[] = {8, 9, 10, 11};
 
 void setup() {
-  pinMode(5, OUTPUT);  //아날로그 출력은 생략 가능
-  pinMode(8, INPUT_PULLUP);
-  pinMode(9, INPUT_PULLUP);
-  pinMode(10, INPUT_PULLUP);
-  pinMode(11, INPUT_PULLUP);
+  for(int i = 0; i < 4; i++){
+    pinMode(button[i], INPUT_PULLUP); //풀업 저항
+  }
 }
 
 void loop() {
